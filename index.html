@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Censo DEIP Eastman | METARH</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Barlow', 'sans-serif'],
+            },
+            colors: {
+              metarh: {
+                dark: '#470082',
+                primary: '#aa3ffe',
+                pink: '#ff27f9',
+                lime: '#c9f545',
+                light: '#f3e5ff',
+                gray: '#F5F5F5'
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        font-family: 'Barlow', sans-serif;
+        background-color: #F8FAFC;
+      }
+      
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      
+      .animate-fade-in {
+        animation: fadeIn 0.5s ease-out forwards;
+      }
+
+      /* Print Styles for PDF Generation */
+      @media print {
+        @page {
+          margin: 1cm;
+          size: A4;
+        }
+        
+        body {
+          background-color: white;
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        }
+
+        /* Hide interactive elements */
+        header, 
+        footer button,
+        .no-print {
+          display: none !important;
+        }
+
+        /* Adjust containers for full width */
+        .container, main {
+          max-width: 100% !important;
+          width: 100% !important;
+          margin: 0 !important;
+          padding: 0 !important;
+        }
+
+        /* Hero adjustment */
+        .bg-metarh-dark {
+          color: black !important; /* Save ink option, or keep visual if background graphics enabled */
+          padding-top: 20px !important;
+          padding-bottom: 20px !important;
+        }
+        
+        .hero-text {
+          color: black !important;
+        }
+
+        /* Ensure charts and cards don't break awkwardly */
+        .break-inside-avoid {
+          break-inside: avoid;
+        }
+        
+        /* Force expansion of details */
+        .print-expand {
+          display: block !important;
+          height: auto !important;
+          opacity: 1 !important;
+        }
+
+        /* Hide shadows for cleaner print */
+        .shadow-sm, .shadow-md, .shadow-lg {
+          box-shadow: none !important;
+          border: 1px solid #e2e8f0;
+        }
+      }
+    </style>
+    <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.2.0",
+    "react/": "https://esm.sh/react@18.2.0/",
+    "react-dom": "https://esm.sh/react-dom@18.2.0",
+    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+    "recharts": "https://esm.sh/recharts@2.12.7?deps=react@18.2.0,react-dom@18.2.0",
+    "lucide-react": "https://esm.sh/lucide-react@0.344.0?deps=react@18.2.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+  <link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="./index.tsx"></script>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
