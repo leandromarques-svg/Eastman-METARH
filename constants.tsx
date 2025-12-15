@@ -34,7 +34,7 @@ export const DICTIONARY: Record<Language, TranslationDictionary> = {
     tabs: { overview: 'Visão Geral e Dados', detailed: 'Pesquisa', insights: 'Insights', recommendations: 'Recomendações' },
     filters: { general: 'Visão Geral (Consolidado)', sp: 'Escritório SP', maua: 'Fábrica Mauá' },
     metrics: {
-      lgbt: 'LGBTIAPN+', lgbt_desc: 'Autodeclaração de diversidade sexual/afetiva.',
+      lgbt: 'LGBTQIAPN+', lgbt_desc: 'Autodeclaração de diversidade sexual/afetiva.',
       pcd: 'Pessoas com Deficiência', pcd_desc: 'Colaboradores que relataram possuir alguma deficiência.',
       gender: 'Gênero Predominante', gender_desc: 'Maioria identificada como',
       age: 'Faixa Etária Principal', age_desc: 'Concentração entre'
