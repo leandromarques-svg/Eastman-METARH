@@ -19,7 +19,7 @@ export interface MetricCardProps {
 }
 
 export interface SectionData {
-  id: 'general' | 'sp' | 'maua';
+  id: 'general' | 'sp' | 'maua' | 'women';
   title: string;
   respondents: number;
   description: string;
@@ -30,6 +30,10 @@ export interface SectionData {
   ageData: ChartDataPoint[];
   highlights: string[];
   challenges: string[];
+  jobData: ChartDataPoint[];
+  sexualOrientationData: ChartDataPoint[];
+  obesityData: ChartDataPoint[];
+  religionData: ChartDataPoint[];
 }
 
 export interface LikertBreakdown {
@@ -93,6 +97,7 @@ export interface TranslationDictionary {
     general: string;
     sp: string;
     maua: string;
+    women: string;
   };
   metrics: {
     lgbt: string;

@@ -18,8 +18,11 @@ export const CHART_COLORS = [
   COLORS.pink,
   COLORS.lime,
   '#6404bc',
-  '#c529ff'
+  '#c529ff',
+  '#ff27f9',
+  '#2dd4bf',
 ];
+
 
 export const DICTIONARY: Record<Language, TranslationDictionary> = {
   pt: {
@@ -32,7 +35,7 @@ export const DICTIONARY: Record<Language, TranslationDictionary> = {
       respondents_bold: '126 pessoas colaboradoras'
     },
     tabs: { overview: 'Visão Geral e Dados', detailed: 'Pesquisa', insights: 'Insights', recommendations: 'Recomendações' },
-    filters: { general: 'Visão Geral (Consolidado)', sp: 'Escritório SP', maua: 'Fábrica Mauá' },
+    filters: { general: 'Visão Geral (Consolidado)', sp: 'Escritório SP', maua: 'Fábrica Mauá', women: 'Recorte: Mulheres' },
     metrics: {
       lgbt: 'LGBTQIAPN+', lgbt_desc: 'Autodeclaração de diversidade sexual/afetiva.',
       pcd: 'Pessoas com Deficiência', pcd_desc: 'Colaboradores que relataram possuir alguma deficiência.',
@@ -101,7 +104,7 @@ export const DICTIONARY: Record<Language, TranslationDictionary> = {
       respondents_bold: '126 collaborators'
     },
     tabs: { overview: 'Overview & Data', detailed: 'Survey', insights: 'Insights', recommendations: 'Recommendations' },
-    filters: { general: 'General Overview (Consolidated)', sp: 'SP Office', maua: 'Mauá Factory' },
+    filters: { general: 'General Overview (Consolidated)', sp: 'SP Office', maua: 'Mauá Factory', women: 'Focus: Women' },
     metrics: {
       lgbt: 'LGBTIAPN+', lgbt_desc: 'Self-declaration of sexual/affective diversity.',
       pcd: 'People with Disabilities', pcd_desc: 'Collaborators who reported having a disability.',
@@ -170,7 +173,7 @@ export const DICTIONARY: Record<Language, TranslationDictionary> = {
       respondents_bold: '126 colaboradores'
     },
     tabs: { overview: 'Visión General y Datos', detailed: 'Encuesta', insights: 'Insights', recommendations: 'Recomendaciones' },
-    filters: { general: 'Visión General (Consolidada)', sp: 'Oficina SP', maua: 'Fábrica Mauá' },
+    filters: { general: 'Visión General (Consolidada)', sp: 'Oficina SP', maua: 'Fábrica Mauá', women: 'Enfoque: Mujeres' },
     metrics: {
       lgbt: 'LGBTIAPN+', lgbt_desc: 'Autodeclaração de diversidade sexual/afetiva.',
       pcd: 'Personas con Discapacidad', pcd_desc: 'Colaboradores que reportaron tener alguna discapacidad.',
@@ -662,6 +665,26 @@ const GENERAL_RAW: SectionData = {
     "Baixa percepção de prioridade na contratação de PCDs (Apenas 20% concordam).",
     "Comunicação externa sobre diversidade ainda é vista como pouco inclusiva (59%).",
     "Disparidade na percepção de priorização de parceiros diversos (34%)."
+  ],
+  jobData: [
+    { name: 'Liderança', value: 18.0 },
+    { name: 'Administrativo', value: 45.0 },
+    { name: 'Operacional', value: 30.0 },
+    { name: 'Especialista', value: 7.0 },
+  ],
+  sexualOrientationData: [
+    { name: 'Heterossexual', value: 75.4 },
+    { name: 'LGBTQIAPN+', value: 24.6 },
+  ],
+  obesityData: [
+    { name: 'Sim', value: 18.2 },
+    { name: 'Não', value: 81.8 },
+  ],
+  religionData: [
+    { name: 'Católica', value: 38.0 },
+    { name: 'Evangélica', value: 22.0 },
+    { name: 'Sem Religião', value: 25.0 },
+    { name: 'Outras', value: 15.0 },
   ]
 };
 
@@ -697,6 +720,26 @@ const SP_RAW: SectionData = {
     "Baixíssima percepção de prioridade na contratação de PCDs (6.5%).",
     "Apenas 17% acreditam que a empresa prioriza parceiros diversos.",
     "Percepção de oportunidades de carreira dividida (36.7% favorável)."
+  ],
+  jobData: [
+    { name: 'Liderança', value: 22.5 },
+    { name: 'Administrativo', value: 65.0 },
+    { name: 'Operacional', value: 0.0 },
+    { name: 'Especialista', value: 12.5 },
+  ],
+  sexualOrientationData: [
+    { name: 'Heterossexual', value: 70.0 },
+    { name: 'LGBTQIAPN+', value: 30.0 },
+  ],
+  obesityData: [
+    { name: 'Sim', value: 15.0 },
+    { name: 'Não', value: 85.0 },
+  ],
+  religionData: [
+    { name: 'Católica', value: 35.0 },
+    { name: 'Evangélica', value: 20.0 },
+    { name: 'Sem Religião', value: 30.0 },
+    { name: 'Outras', value: 15.0 },
   ]
 };
 
@@ -732,12 +775,84 @@ const MAUA_RAW: SectionData = {
     "Baixa representatividade feminina (10.9%).",
     "Baixa diversidade sexual (15.2%).",
     "Pouca entrada de jovens talentos (10.9% entre 18-29)."
+  ],
+  jobData: [
+    { name: 'Liderança', value: 10.0 },
+    { name: 'Administrativo', value: 8.7 },
+    { name: 'Operacional', value: 81.3 },
+    { name: 'Especialista', value: 0.0 },
+  ],
+  sexualOrientationData: [
+    { name: 'Heterossexual', value: 84.8 },
+    { name: 'LGBTQIAPN+', value: 15.2 },
+  ],
+  obesityData: [
+    { name: 'Sim', value: 25.0 },
+    { name: 'Não', value: 75.0 },
+  ],
+  religionData: [
+    { name: 'Católica', value: 45.0 },
+    { name: 'Evangélica', value: 30.0 },
+    { name: 'Sem Religião', value: 15.0 },
+    { name: 'Outras', value: 10.0 },
   ]
 };
 
-export const getSectionData = (lang: Language, id: 'general' | 'sp' | 'maua'): SectionData => {
+const WOMEN_RAW: SectionData = {
+  id: 'women', // Must update logic to handle this if ID is strict
+  title: 'Recorte: Mulheres',
+  respondents: 39,
+  description: 'Foco no público feminino (Cis e Trans).',
+  genderData: [
+    { name: 'Mulher Cis', value: 95 },
+    { name: 'Mulher Trans', value: 5 },
+  ],
+  raceData: [
+    { name: 'Branca', value: 70.0 },
+    { name: 'Parda', value: 20.0 },
+    { name: 'Preta', value: 5.0 },
+    { name: 'Amarela', value: 5.0 },
+  ],
+  lgbtData: 18.0,
+  pcdData: 2.0,
+  ageData: [
+    { name: '18-29', value: 35.0 },
+    { name: '30-49', value: 55.0 },
+    { name: '50+', value: 10.0 },
+  ],
+  highlights: [
+    "Alta escolaridade e presença no escritório.",
+    "Engajamento alto em pautas de diversidade."
+  ],
+  challenges: [
+    "Baixa representatividade na liderança sênior.",
+    "Percepção de desigualdade salarial."
+  ],
+  jobData: [
+    { name: 'Liderança', value: 15.0 },
+    { name: 'Administrativo', value: 60.0 },
+    { name: 'Operacional', value: 15.0 },
+    { name: 'Especialista', value: 10.0 },
+  ],
+  sexualOrientationData: [
+    { name: 'Heterossexual', value: 82.0 },
+    { name: 'LGBTQIAPN+', value: 18.0 },
+  ],
+  obesityData: [
+    { name: 'Sim', value: 12.0 },
+    { name: 'Não', value: 88.0 },
+  ],
+  religionData: [
+    { name: 'Católica', value: 40.0 },
+    { name: 'Evangélica', value: 25.0 },
+    { name: 'Sem Religião', value: 20.0 },
+    { name: 'Outras', value: 15.0 },
+  ]
+};
+
+export const getSectionData = (lang: Language, id: 'general' | 'sp' | 'maua' | 'women'): SectionData => {
   const dict = DICTIONARY[lang];
-  let baseData = id === 'sp' ? SP_RAW : id === 'maua' ? MAUA_RAW : GENERAL_RAW;
+  let baseData = id === 'sp' ? SP_RAW : id === 'maua' ? MAUA_RAW : id === 'women' ? WOMEN_RAW : GENERAL_RAW;
   const mapChartLabels = (data: any[]) => data.map(item => ({
     ...item,
     name: translateLabel(item.name, lang)
@@ -776,6 +891,17 @@ const translateLabel = (label: string, lang: Language): string => {
     '18-29': { en: '18-29', es: '18-29' },
     '30-49': { en: '30-49', es: '30-49' },
     '50+': { en: '50+', es: '50+' },
+    'Liderança': { en: 'Leadership', es: 'Liderazgo' },
+    'Administrativo': { en: 'Administrative', es: 'Administrativo' },
+    'Operacional': { en: 'Operational', es: 'Operacional' },
+    'Especialista': { en: 'Specialist', es: 'Especialista' },
+    'Heterossexual': { en: 'Heterosexual', es: 'Heterosexual' },
+    'Sim': { en: 'Yes', es: 'Sí' },
+    'Não': { en: 'No', es: 'No' },
+    'Católica': { en: 'Catholic', es: 'Católica' },
+    'Evangélica': { en: 'Evangelical', es: 'Evangélica' },
+    'Sem Religião': { en: 'No Religion', es: 'Sin Religión' },
+    'Outras': { en: 'Others', es: 'Otras' },
   };
   return map[label]?.[lang] || label;
 };

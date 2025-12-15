@@ -25,14 +25,6 @@ const InsightsSection: React.FC<Props> = ({ language }) => {
             : language === 'en'
               ? "There is a marked difference in the perception of inclusion between units. The Factory (Mauá) shows consistently higher rates of belonging, psychological safety, and trust in leadership (often above 90%), while the Office (SP) shows greater skepticism and neutrality, suggesting the need for distinct engagement strategies for each audience."
               : "Existe una marcada diferencia en la percepción de inclusión entre las unidades. La Fábrica (Mauá) presenta índices consistentemente más altos de pertenencia, seguridad psicológica y confianza en el liderazgo (frecuentemente por encima del 90%), mientras que la Oficina (SP) muestra mayor escepticismo y neutralidad, sugiriendo la necesidad de estrategias distintas de compromiso para cada público."
-        },
-        {
-          title: language === 'pt' ? "Lacuna de Marca Empregadora" : language === 'en' ? "Employer Branding Gap" : "Brecha de Marca Empleadora",
-          text: language === 'pt'
-            ? "Há um descompasso entre a vivência interna e a percepção externa. Especialmente no público corporativo (SP), sente-se que a Eastman não comunica efetivamente sua diversidade para o mercado (apenas 42% de concordância em SP), o que pode impactar a atração de novos talentos diversos."
-            : language === 'en'
-              ? "There is a mismatch between internal experience and external perception. Especially in the corporate audience (SP), it is felt that Eastman does not effectively communicate its diversity to the market (only 42% agreement in SP), which may impact the attraction of new diverse talent."
-              : "Hay un desajuste entre la vivencia interna y la percepción externa. Especialmente en el público corporativo (SP), se siente que Eastman no comunica efectivamente su diversidad al mercado (solo 42% de acuerdo en SP), lo que puede impactar la atracción de nuevos talentos diversos."
         }
       ]
     },
@@ -50,12 +42,12 @@ const InsightsSection: React.FC<Props> = ({ language }) => {
               : "El liderazgo directo es el activo más fuerte de la organización, con 93.6% de aprobación general. Incluso en áreas donde la percepción de la empresa es más crítica, los líderes directos continúan siendo vistos como inclusivos y respetuosos, actuando como un 'amortiguador' positivo para la cultura organizacional."
         },
         {
-          title: language === 'pt' ? "Desafio Crítico: Inclusão PCD" : language === 'en' ? "Critical Challenge: PWD Inclusion" : "Desafío Crítico: Inclusión PCD",
+          title: language === 'pt' ? "Desafio da Representatividade Racial" : language === 'en' ? "Racial Representativeness Challenge" : "Desafío de Representatividad Racial",
           text: language === 'pt'
-            ? "A inclusão de Pessoas com Deficiência (PCD) é o ponto mais crítico do censo. Com apenas 20% de percepção positiva sobre a priorização na contratação e barreiras invisíveis percebidas, há uma urgência em rever políticas de acessibilidade, atração e retenção para este grupo."
+            ? "Enquanto a fábrica apresenta maior diversidade racial (39% negros e pardos), o escritório ainda é predominantemente branco (72%). A percepção de prioridade na contratação racial é moderada (54%), indicando a necessidade de letramento e ações intencionais, especialmente para cargos administrativos."
             : language === 'en'
-              ? "The inclusion of People with Disabilities (PWD) is the most critical point of the census. With only 20% positive perception regarding hiring prioritization and perceived invisible barriers, there is an urgency to review accessibility, attraction, and retention policies for this group."
-              : "La inclusión de Personas con Discapacidad (PCD) es el punto más crítico del censo. Con solo 20% de percepción positiva sobre la priorización en la contratación y barreras invisibles percibidas, hay una urgencia en revisar políticas de accesibilidad, atracción y retención para este grupo."
+              ? "While the factory shows greater racial diversity (39% Black/Brown), the office is predominantly White (72%). The perception of racial hiring priority is moderate (54%), indicating the need for literacy and intentional actions, especially for administrative roles."
+              : "Mientras que la fábrica presenta mayor diversidad racial (39% negros/pardos), la oficina es predominantemente blanca (72%). La percepción de prioridad en la contratación racial es moderada (54%), indicando la necesidad de alfabetización y acciones intencionales, especialmente para cargos administrativos."
         }
       ]
     },
@@ -124,9 +116,9 @@ const InsightsSection: React.FC<Props> = ({ language }) => {
               <div key={index} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow group">
                 <div className="flex items-start gap-4">
                   <span className={`flex-shrink-0 w-8 h-8 rounded-full ${dimension.color === 'purple' ? 'bg-purple-100 text-purple-700 border-purple-200' :
-                      dimension.color === 'pink' ? 'bg-pink-100 text-pink-700 border-pink-200' :
-                        dimension.color === 'lime' ? 'bg-lime-100 text-lime-700 border-lime-200' :
-                          'bg-slate-100 text-slate-700 border-slate-200'
+                    dimension.color === 'pink' ? 'bg-pink-100 text-pink-700 border-pink-200' :
+                      dimension.color === 'lime' ? 'bg-lime-100 text-lime-700 border-lime-200' :
+                        'bg-slate-100 text-slate-700 border-slate-200'
                     } font-bold flex items-center justify-center text-sm border group-hover:scale-110 transition-transform`}>
                     {dimIndex + 1}.{index + 1}
                   </span>
