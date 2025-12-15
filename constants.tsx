@@ -5,11 +5,11 @@ export const COLORS = {
   darkPurple: '#470082',
   primaryPurple: '#aa3ffe',
   pink: '#ff27f9',
-  lime: '#65a30d', 
+  lime: '#65a30d',
   white: '#ffffff',
   gray: '#64748b',
   teal: '#2dd4bf',
-  orange: '#f97316' 
+  orange: '#f97316'
 };
 
 export const CHART_COLORS = [
@@ -31,7 +31,7 @@ export const DICTIONARY: Record<Language, TranslationDictionary> = {
       p3: 'participaram, sendo 80 da unidade Escritório – SP e 46 da unidade Fábrica – Mauá/SP.',
       respondents_bold: '126 pessoas colaboradoras'
     },
-    tabs: { overview: 'Visão Geral e Dados', detailed: 'Pesquisa', insights: 'Insights' },
+    tabs: { overview: 'Visão Geral e Dados', detailed: 'Pesquisa', insights: 'Insights', recommendations: 'Recomendações' },
     filters: { general: 'Visão Geral (Consolidado)', sp: 'Escritório SP', maua: 'Fábrica Mauá' },
     metrics: {
       lgbt: 'LGBTIAPN+', lgbt_desc: 'Autodeclaração de diversidade sexual/afetiva.',
@@ -100,7 +100,7 @@ export const DICTIONARY: Record<Language, TranslationDictionary> = {
       p3: 'participated, with 80 from the Office unit – SP and 46 from the Factory unit – Mauá/SP.',
       respondents_bold: '126 collaborators'
     },
-    tabs: { overview: 'Overview & Data', detailed: 'Survey', insights: 'Insights' },
+    tabs: { overview: 'Overview & Data', detailed: 'Survey', insights: 'Insights', recommendations: 'Recommendations' },
     filters: { general: 'General Overview (Consolidated)', sp: 'SP Office', maua: 'Mauá Factory' },
     metrics: {
       lgbt: 'LGBTIAPN+', lgbt_desc: 'Self-declaration of sexual/affective diversity.',
@@ -169,7 +169,7 @@ export const DICTIONARY: Record<Language, TranslationDictionary> = {
       p3: 'participaron, siendo 80 de la unidad Oficina – SP y 46 de la unidad Fábrica – Mauá/SP.',
       respondents_bold: '126 colaboradores'
     },
-    tabs: { overview: 'Visión General y Datos', detailed: 'Encuesta', insights: 'Insights' },
+    tabs: { overview: 'Visión General y Datos', detailed: 'Encuesta', insights: 'Insights', recommendations: 'Recomendaciones' },
     filters: { general: 'Visión General (Consolidada)', sp: 'Oficina SP', maua: 'Fábrica Mauá' },
     metrics: {
       lgbt: 'LGBTIAPN+', lgbt_desc: 'Autodeclaração de diversidade sexual/afetiva.',
@@ -233,7 +233,7 @@ export const DICTIONARY: Record<Language, TranslationDictionary> = {
 
 // --- TRANSLATION MAPS ---
 
-const CONSIDERATIONS_MAP: Record<string, { general: {en: string, es: string}, sp: { en: string, es: string }, maua: { en: string, es: string } }> = {
+const CONSIDERATIONS_MAP: Record<string, { general: { en: string, es: string }, sp: { en: string, es: string }, maua: { en: string, es: string } }> = {
   'q10': {
     general: {
       en: "The consolidated view (69.1%) is positive, but masks a polarization: while the Factory is highly favorable, the Office shows hesitation.",
@@ -636,22 +636,22 @@ const GENERAL_RAW: SectionData = {
   respondents: 126,
   description: 'Consolidado de todas as unidades.',
   genderData: [
-    { name: 'Homem Cis', value: 65.1 }, 
-    { name: 'Mulher Cis', value: 30.9 }, 
+    { name: 'Homem Cis', value: 65.1 },
+    { name: 'Mulher Cis', value: 30.9 },
     { name: 'Outros', value: 4.0 },
   ],
   raceData: [
-    { name: 'Branca', value: 67.4 }, 
-    { name: 'Parda', value: 23.0 },  
-    { name: 'Preta', value: 4.8 },   
-    { name: 'Amarela', value: 4.8 }, 
+    { name: 'Branca', value: 67.4 },
+    { name: 'Parda', value: 23.0 },
+    { name: 'Preta', value: 4.8 },
+    { name: 'Amarela', value: 4.8 },
   ],
-  lgbtData: 24.6, 
-  pcdData: 4.8,   
+  lgbtData: 24.6,
+  pcdData: 4.8,
   ageData: [
-    { name: '18-29', value: 23.8 }, 
-    { name: '30-49', value: 61.1 }, 
-    { name: '50+', value: 15.1 },   
+    { name: '18-29', value: 23.8 },
+    { name: '30-49', value: 61.1 },
+    { name: '50+', value: 15.1 },
   ],
   highlights: [
     "93% sentem-se tratados com respeito e dignidade (Média Ponderada).",
@@ -681,12 +681,12 @@ const SP_RAW: SectionData = {
     { name: 'Preta', value: 3.75 },
     { name: 'Amarela', value: 7.50 },
   ],
-  lgbtData: 30.0, 
-  pcdData: 3.75, 
+  lgbtData: 30.0,
+  pcdData: 3.75,
   ageData: [
     { name: '18-29', value: 31.25 },
-    { name: '30-49', value: 57.50 }, 
-    { name: '50+', value: 11.25 },   
+    { name: '30-49', value: 57.50 },
+    { name: '50+', value: 11.25 },
   ],
   highlights: [
     "Maior diversidade de gênero (42.5% mulheres).",
@@ -708,7 +708,7 @@ const MAUA_RAW: SectionData = {
   genderData: [
     { name: 'Homem Cis', value: 80.43 },
     { name: 'Mulher Cis', value: 10.87 },
-    { name: 'Trans/Outros', value: 8.7 }, 
+    { name: 'Trans/Outros', value: 8.7 },
   ],
   raceData: [
     { name: 'Branca', value: 60.87 },
@@ -716,12 +716,12 @@ const MAUA_RAW: SectionData = {
     { name: 'Preta', value: 6.52 },
     { name: 'Amarela', value: 0 },
   ],
-  lgbtData: 15.2, 
-  pcdData: 6.5,   
+  lgbtData: 15.2,
+  pcdData: 6.5,
   ageData: [
     { name: '18-29', value: 10.87 },
-    { name: '30-49', value: 67.39 }, 
-    { name: '50+', value: 21.74 },   
+    { name: '30-49', value: 67.39 },
+    { name: '50+', value: 21.74 },
   ],
   highlights: [
     "Pertencimento total: 100% sentem-se parte da Eastman.",
@@ -750,14 +750,14 @@ export const getSectionData = (lang: Language, id: 'general' | 'sp' | 'maua'): S
     genderData: mapChartLabels(baseData.genderData),
     raceData: mapChartLabels(baseData.raceData),
     highlights: lang === 'pt' ? baseData.highlights : (lang === 'en' ? [
-        "High sense of respect and dignity.", "Inclusive leadership approval.", "High sense of belonging."
+      "High sense of respect and dignity.", "Inclusive leadership approval.", "High sense of belonging."
     ] : [
-        "Alto sentido de respeto y dignidad.", "Aprobación de liderazgo inclusivo.", "Alto sentido de pertenencia."
+      "Alto sentido de respeto y dignidad.", "Aprobación de liderazgo inclusivo.", "Alto sentido de pertenencia."
     ]),
     challenges: lang === 'pt' ? baseData.challenges : (lang === 'en' ? [
-        "Low priority perception for hiring People with Disabilities.", "External communication seen as not very inclusive.", "Gap in diverse partner prioritization."
+      "Low priority perception for hiring People with Disabilities.", "External communication seen as not very inclusive.", "Gap in diverse partner prioritization."
     ] : [
-        "Baja percepción de prioridad en contratación de Personas con Discapacidad.", "Comunicación externa vista como poco inclusiva.", "Brecha en la priorización de socios diversos."
+      "Baja percepción de prioridad en contratación de Personas con Discapacidad.", "Comunicación externa vista como poco inclusiva.", "Brecha en la priorización de socios diversos."
     ])
   };
 };
@@ -780,21 +780,141 @@ const translateLabel = (label: string, lang: Language): string => {
   return map[label]?.[lang] || label;
 };
 
+// --- RECOMMENDATIONS DATA ---
+export const RECOMMENDATIONS_DATA = {
+  title: "Relatório de Recomendações Estratégicas Censo DEIP Eastman 2025",
+  introduction: [
+    "O presente relatório visa apresentar as recomendações estratégicas da METARH, baseadas nos resultados do Censo de Diversidade, Equidade e Inclusão (DEIP) realizado na Eastman entre 02 de outubro e 15 de novembro de 2025.",
+    "O Censo, que contou com a participação de 126 pessoas colaboradoras, revelou percepções majoritariamente positivas sobre a cultura de respeito e o senso de pertencimento, mas também apontou áreas críticas de melhoria em termos de representatividade e visibilidade das ações de DEIP.",
+    "Para que o tema DEIP deixe de ser visto como um custo e passe a ser reconhecido como um investimento estratégico, as recomendações a seguir serão alinhadas com os resultados financeiros e de performance que uma cultura verdadeiramente inclusiva e diversa."
+  ],
+  dimensions: [
+    {
+      id: 'diversidade',
+      title: '2.1. Dimensão: Diversidade (Mapeamento Demográfico)',
+      description: 'A dimensão Diversidade se concentra em conhecer o perfil demográfico dos colaboradores e o Censo identificou baixa representatividade nos grupos 50+, Pessoas com Deficiência (PCDs), e Diversidade de Gênero/Raça.',
+      recommendations: [
+        {
+          term: 'Curto Prazo',
+          action: 'Criação e comunicação de vagas afirmativas',
+          detail: 'Foco inicial em jovens aprendizes/estagiários e pessoas candidatas PCDs para suprir a baixa representação.',
+          justification: 'O aumento da diversidade enriquece o ambiente de trabalho com diferentes perspectivas, levando a soluções mais criativas e eficazes. Em termos financeiros, a atração e retenção de talentos diversos comprovadamente melhoram a inovação e o resultado final da empresa.'
+        },
+        {
+          term: 'Médio Prazo',
+          action: 'Revisão da política de recrutamento e seleção (R&S).',
+          detail: 'Implementar ativamente indicadores (KPIs) de diversidade para cargos táticos e estratégicos, e em áreas com baixa representatividade, como na Fábrica de Mauá (baixa presença feminina, 11%) e no escritório de SP (baixa presença de pessoas pretas, amarelas e indígenas).',
+          justification: 'Mitigação do ceticismo das pessoas colaboradoras. O público interno tem uma percepção moderada do reconhecimento da Eastman como empresa diversa. Aumentar a diversidade ajuda a fortalecer a marca empregadora e a reter os talentos.'
+        },
+        {
+          term: 'Longo Prazo',
+          action: 'Programa de mentoria reversa e Sponsorship.',
+          detail: 'Focar na atração e retenção de profissionais 50+ e de raças/etnias minorizadas, conectando-os a lideranças para garantir equidade de crescimento.',
+          justification: 'Profissionais mais experientes (50+) demonstram elevado engajamento e forte senso de responsabilidade. Sua retenção e contratação reduzem o alto custo de turnover e a perda de expertise valiosa.'
+        }
+      ]
+    },
+    {
+      id: 'inclusao',
+      title: '2.2. Dimensão: Inclusão (Percepção do Ambiente)',
+      description: 'Esta dimensão mapeia a percepção de pertencimento e valorização. O Censo aponta um forte senso de respeito (94%) , mas uma preocupação sobre a igualdade de oportunidades (20% de discordância) e insegurança em ser autêntico (33% têm receio ou não se sentem à vontade).',
+      recommendations: [
+        {
+          term: 'Curto Prazo',
+          action: 'Plano de comunicação interna de carreira transparente.',
+          detail: 'Focar em divulgar claramente os critérios de desenvolvimento e ascensão profissional.',
+          justification: 'Aumento do engajamento. Pessoas colaboradoras que percebem igualdade de oportunidades e que se sentem respeitadas são mais propensas a buscar conhecimento para evoluir em suas carreiras. Isso impulsiona desempenho e criatividade.'
+        },
+        {
+          term: 'Médio Prazo',
+          action: 'Treinamento de liderança inclusiva e gestão de vieses inconscientes.',
+          detail: 'A liderança direta é bem avaliada (94%), mas precisa de ferramentas para resolver o receio de 1/3 da equipe em ser autêntica.',
+          justification: 'Redução de riscos. A sensação de segurança e pertencimento afeta positivamente a saúde física e mental dos colaboradores. Reduzir o estresse relacionado à autenticidade diminui o absenteísmo e o custo de turnover por esgotamento.'
+        },
+        {
+          term: 'Longo Prazo',
+          action: 'Aprofundamento da escuta ativa com grupos minorizados.',
+          detail: 'Implementar grupos de afinidade e canais de escuta específicos para PCDs e LGBTQIAPN+.',
+          justification: 'Retenção de talentos minorizados. O aprofundamento da escuta garante que a inclusão seja percebida de forma consistente por quem mais precisa. Reduz a rotatividade voluntária, economizando em custos de substituição.'
+        }
+      ]
+    },
+    {
+      id: 'culturais',
+      title: '2.3. Dimensão: Aspectos Culturais e Organizacionais',
+      description: 'Esta dimensão avalia as políticas, valores e práticas que definem a cultura. Foi notado que as políticas existem, mas não são plenamente difundidas , e as práticas não são reconhecidas de forma clara no dia a dia pelas pessoas colaboradoras.',
+      recommendations: [
+        {
+          term: 'Curto Prazo',
+          action: 'Campanha de difusão da política DEIP e canais de denúncia.',
+          detail: 'Garantir que todas as pessoas colaboradoras compreendam os objetivos e diretrizes e saibam que práticas discriminatórias são combatidas.',
+          justification: 'Fortalecimento da cultura de respeito. Investir na comunicação interna reduz as incertezas (alto índice de neutros) e reforça o compromisso institucional, consolidando a cultura de segurança no trabalho.'
+        },
+        {
+          term: 'Médio Prazo',
+          action: 'Criação de um comitê de Diversidade e Inclusão (DEI).',
+          detail: 'Estruturar a governança para definir metas e indicadores anuais (KPIs) e garantir a visibilidade das ações.',
+          justification: 'Consolidação do Valor da Empresa. Ao tornar o valor "Inclusão e Diversidade" mais tangível e visível no dia a dia, a empresa reforça a fidelidade da pessoa colaboradora e a confiança da liderança na estratégia.'
+        },
+        {
+          term: 'Longo Prazo',
+          action: 'Treinamentos contínuos e obrigatórios.',
+          detail: 'Estabelecer treinamentos sobre Comunicação Não Violenta, Sensibilidade Cultural, Segurança Psicológica, Assédio e temas pertinentes a DEIP.',
+          justification: 'Melhoria da Comunicação. O fortalecimento das práticas de comunicação interna e externa (que ainda têm alta neutralidade e baixa concordância total) posiciona a empresa como referência e melhora o relacionamento com o público externo.'
+        }
+      ]
+    },
+    {
+      id: 'representatividade',
+      title: '2.4. Dimensão: Representatividade (Presença em Liderança e Processos)',
+      description: 'A representatividade refere-se à percepção da presença de grupos diversos em todas as esferas, especialmente na liderança. O Censo indica que a percepção de diversidade na liderança é majoritariamente moderada/baixa, e as pessoas colaboradoras têm uma visão neutra ou negativa sobre a priorização de grupos minorizados nos processos seletivos internos (PCDs, LGBTQIAPN+ e Raças).',
+      recommendations: [
+        {
+          term: 'Curto Prazo',
+          action: 'Transparência e divulgação dos critérios de seleção.',
+          detail: 'Ampliar a visibilidade de ações afirmativas e comunicar os resultados de forma clara.',
+          justification: 'Redução da neutralidade. O alto índice de neutralidade indica que as ações não são percebidas. Maior visibilidade aumenta a confiança e consolida a percepção positiva.'
+        },
+        {
+          term: 'Médio Prazo',
+          action: 'Programa de desenvolvimento de liderança diversa.',
+          detail: 'Criar trilhas de carreira inclusivas para grupos sub-representados, preparando-os ativamente para cargos de gestão.',
+          justification: 'Melhora na tomada de decisão. A representatividade assegura que diferentes vozes e experiências estejam incluídas nas decisiones. Empresas com mayor diversidade na liderança demonstram melhor performance financeira e maior resiliência a crises.'
+        },
+        {
+          term: 'Longo Prazo',
+          action: 'Implementação de critérios de DEIP para parcerias comerciais.',
+          detail: 'Tornar o valor de inclusão da diversidade um fator explícito e eliminatório na seleção e manutenção de fornecedores e clientes.',
+          justification: 'Alinhamento estratégico com a marca: A discrepância sobre a priorização desse valor em parcerias (73% consideram apenas às vezes ou nem sempre) enfraquece a imagem externa. Alinhar parceiros consolida a marca empregadora como referência no tema.'
+        }
+      ]
+    }
+  ],
+  conclusion: [
+    "Os resultados do Censo DEIP Eastman confirmam que o caminho para uma cultura verdadeiramente inclusiva está em progresso, mas exige maior intencionalidade e visibilidade das ações. As percepções positivas sobre respeito e pertencimento são a base sólida da cultura. No entanto, a alta taxa de respostas neutras e a baixa representatividade de grupos minorizados sinalizam uma desconexão entre o discurso e a prática percebida.",
+    "DEIP não é despesa, é estratégia de crescimento. As ações propostas não são apenas iniciativas da área de Recursos Humanos, mas sim motores de resultados financeiros, como:",
+    "● Vantagem Competitiva (Inovação): mapear a diversidade enriquece o ambiente de trabalho, o que leva a soluções mais criativas e eficazes.",
+    "● Redução de Custos de Turnover: Investir em inclusão e pertencimento é a principal estratégia de retenção. O custo para substituir um profissional pode variar entre 6 a 9 meses do salário desse colaborador, impactando o resultado final da empresa.",
+    "● Melhoria de Performance e Produtividade: empresas com programas eficazes de reconhecimento e recompensas relatam uma melhora de até 31% na produtividade geral.",
+    "As oportunidades estratégicas estão em reforçar a comunicação e profissionalizar os processos de seleção e carreira para traduzir o valor da inclusão em ações tangíveis. A jornada DEIP é contínua, e o time Trilhando+ está preparado para apoiar a Eastman na implementação dessas recomendações."
+  ]
+};
+
 // --- SURVEY DATA ---
 
 export const getDetailedSurveyData = (lang: Language): SurveyCategory[] => {
   const isPt = lang === 'pt';
   const isEn = lang === 'en';
-  
+
   return [
     {
       id: 'percepcao_diversidade',
       title: isPt ? 'Diversidade' : isEn ? 'Diversity' : 'Diversidad',
-      description: isPt 
+      description: isPt
         ? 'Esta dimensão visa conhecer o perfil demográfico dos colaboradores bem como as características que tornam os indivíduos únicos...'
-        : isEn 
-        ? 'This dimension aims to understand the demographic profile of collaborators as well as the characteristics that make individuals unique...'
-        : 'Esta dimensión tiene como objetivo conocer el perfil demográfico de los colaboradores así como las características que hacen únicos a los individuos...',
+        : isEn
+          ? 'This dimension aims to understand the demographic profile of collaborators as well as the characteristics that make individuals unique...'
+          : 'Esta dimensión tiene como objetivo conocer el perfil demográfico de los colaboradores así como las características que hacen únicos a los individuos...',
       color: COLORS.primaryPurple,
       icon: 'users',
       questions: DETAILED_SURVEY_DATA[0].questions.map(q => mapQuestionWithTranslation(q, lang))
@@ -802,11 +922,11 @@ export const getDetailedSurveyData = (lang: Language): SurveyCategory[] => {
     {
       id: 'inclusao',
       title: isPt ? 'Inclusão' : isEn ? 'Inclusion' : 'Inclusión',
-      description: isPt 
+      description: isPt
         ? 'Esta dimensão se preocupa em mapear a percepção do colaborador quanto ao ambiente, onde todos se sintam bem-vindos...'
-        : isEn 
-        ? 'This dimension is concerned with mapping the collaborator\'s perception of the environment, where everyone feels welcome...'
-        : 'Esta dimensión se preocupa por mapear la percepción del colaborador sobre el ambiente, donde todos se sientan bienvenidos...',
+        : isEn
+          ? 'This dimension is concerned with mapping the collaborator\'s perception of the environment, where everyone feels welcome...'
+          : 'Esta dimensión se preocupa por mapear la percepción del colaborador sobre el ambiente, donde todos se sientan bienvenidos...',
       color: COLORS.lime,
       icon: 'heart',
       questions: DETAILED_SURVEY_DATA[1].questions.map(q => mapQuestionWithTranslation(q, lang))
@@ -814,23 +934,23 @@ export const getDetailedSurveyData = (lang: Language): SurveyCategory[] => {
     {
       id: 'cultura',
       title: isPt ? 'Aspectos Culturais Organizacionais' : isEn ? 'Organizational Cultural Aspects' : 'Aspectos Culturales Organizacionales',
-      description: isPt 
+      description: isPt
         ? 'Esta dimensão abrange as normas, políticas, valores e práticas que definem a cultura de uma organização...'
         : isEn
-        ? 'This dimension covers the norms, policies, values, and practices that define an organization\'s culture...'
-        : 'Esta dimensión abarca las normas, políticas, valores y prácticas que definen la cultura de una organización...',
-      color: COLORS.orange, 
+          ? 'This dimension covers the norms, policies, values, and practices that define an organization\'s culture...'
+          : 'Esta dimensión abarca las normas, políticas, valores y prácticas que definen la cultura de una organización...',
+      color: COLORS.orange,
       icon: 'book',
       questions: DETAILED_SURVEY_DATA[2].questions.map(q => mapQuestionWithTranslation(q, lang))
     },
     {
       id: 'representatividade',
       title: isPt ? 'Representatividade' : isEn ? 'Representativeness' : 'Representatividad',
-      description: isPt 
+      description: isPt
         ? 'Esta dimensão refere-se à percepção da presença de grupos diversos em posições de liderança...'
         : isEn
-        ? 'This dimension refers to the perception of the presence of diverse groups in leadership positions...'
-        : 'Esta dimensión se refiere a la percepción de la presencia de grupos diversos en posiciones de liderazgo...',
+          ? 'This dimension refers to the perception of the presence of diverse groups in leadership positions...'
+          : 'Esta dimensión se refiere a la percepción de la presencia de grupos diversos en posiciones de liderazgo...',
       color: COLORS.teal,
       icon: 'target',
       questions: DETAILED_SURVEY_DATA[3].questions.map(q => mapQuestionWithTranslation(q, lang))
@@ -842,7 +962,7 @@ const mapQuestionWithTranslation = (q: any, lang: Language) => {
   return {
     ...q,
     text: translateQuestion(q.id, lang),
-    breakdown: createBreakdownStructure(q), 
+    breakdown: createBreakdownStructure(q),
     considerations: {
       general: translateConsideration(q.id, 'general', lang, q.considerations.general),
       sp: translateConsideration(q.id, 'sp', lang, q.considerations.sp),
@@ -857,7 +977,7 @@ const translateQuestion = (id: string, lang: Language): string => {
   return (lang === 'en' ? t?.en : t?.es) || getQuestionTextById(id);
 }
 
-const translateConsideration = (id: string, unit: 'general'|'sp'|'maua', lang: Language, original: string): string => {
+const translateConsideration = (id: string, unit: 'general' | 'sp' | 'maua', lang: Language, original: string): string => {
   if (lang === 'pt') return original;
   const t = CONSIDERATIONS_MAP[id];
   if (!t) return original;

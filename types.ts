@@ -48,7 +48,7 @@ export interface SurveyQuestion {
   negative: number;
   spScore: number; // Comparativo SP Favorável
   mauaScore: number; // Comparativo Mauá Favorável
-  
+
   // New breakdown structure for detailed view
   breakdown: {
     general: LikertBreakdown;
@@ -87,6 +87,7 @@ export interface TranslationDictionary {
     overview: string;
     detailed: string;
     insights: string;
+    recommendations: string;
   };
   filters: {
     general: string;
@@ -131,7 +132,7 @@ export interface TranslationDictionary {
   insightsSection: {
     title: string;
     subtitle: string;
-    items: Array<{title: string, text: string}>;
+    items: Array<{ title: string, text: string }>;
     cta: {
       title: string;
       text: string;
