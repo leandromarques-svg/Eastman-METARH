@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Target, Clock, TrendingUp, CheckCircle2, AlertCircle, Rocket, BarChart3, Users, PiggyBank } from 'lucide-react';
-import { RECOMMENDATIONS_DATA } from '../constants';
+import { getRecommendationsData } from '../constants';
 import { Language } from '../types';
 
 interface Props {
@@ -8,30 +8,31 @@ interface Props {
 }
 
 const RecommendationsSection: React.FC<Props> = ({ language }) => {
-    // Assuming the user only provided Portuguese content for now, we will render it directly.
-    // In a real multi-language app, we would map this content in constants properly.
-    // Currently, RECOMMENDATIONS_DATA is used regardless of language, but it's in PT.
+    const data = getRecommendationsData(language);
+    const { title, introduction, dimensions, conclusion } = data;
 
-    const [selectedTerm, setSelectedTerm] = useState<'Todos' | 'Curto Prazo' | 'Médio Prazo' | 'Longo Prazo'>('Todos');
+    // Get unique terms from the first dimension to build filter buttons dynamically
+    const uniqueTerms = dimensions[0]?.recommendations.map(r => r.term) || [];
+    const allLabel = language === 'en' ? 'All' : 'Todos';
+    const distinctTerms = [allLabel, ...uniqueTerms];
 
-    const { title, introduction, dimensions, conclusion } = RECOMMENDATIONS_DATA;
+    // State for selected filter
+    const [selectedTerm, setSelectedTerm] = useState<string>(allLabel);
 
     const getTermColor = (term: string) => {
-        switch (term) {
-            case 'Curto Prazo': return 'bg-yellow-100 text-yellow-800 border-yellow-200';
-            case 'Médio Prazo': return 'bg-blue-100 text-blue-800 border-blue-200';
-            case 'Longo Prazo': return 'bg-purple-100 text-purple-800 border-purple-200';
-            default: return 'bg-gray-100 text-gray-800 border-gray-200';
-        }
+        const t = term.toLowerCase();
+        if (t.includes('curto') || t.includes('short') || t.includes('corto')) return 'bg-yellow-100 text-yellow-800 border-yellow-200';
+        if (t.includes('médio') || t.includes('medium') || t.includes('mediano')) return 'bg-blue-100 text-blue-800 border-blue-200';
+        if (t.includes('longo') || t.includes('long') || t.includes('largo')) return 'bg-purple-100 text-purple-800 border-purple-200';
+        return 'bg-gray-100 text-gray-800 border-gray-200';
     };
 
     const getTermIcon = (term: string) => {
-        switch (term) {
-            case 'Curto Prazo': return <AlertCircle size={16} />;
-            case 'Médio Prazo': return <TrendingUp size={16} />;
-            case 'Longo Prazo': return <Target size={16} />;
-            default: return <Clock size={16} />;
-        }
+        const t = term.toLowerCase();
+        if (t.includes('curto') || t.includes('short') || t.includes('corto')) return <AlertCircle size={16} />;
+        if (t.includes('médio') || t.includes('medium') || t.includes('mediano')) return <TrendingUp size={16} />;
+        if (t.includes('longo') || t.includes('long') || t.includes('largo')) return <Target size={16} />;
+        return <Clock size={16} />;
     }
 
     return (
@@ -51,19 +52,19 @@ const RecommendationsSection: React.FC<Props> = ({ language }) => {
 
             {/* Filter Buttons */}
             <div className="flex flex-wrap gap-3 justify-center">
-                {['Todos', 'Curto Prazo', 'Médio Prazo', 'Longo Prazo'].map((term) => (
+                {distinctTerms.map((term) => (
                     <button
                         key={term}
-                        onClick={() => setSelectedTerm(term as any)}
+                        onClick={() => setSelectedTerm(term)}
                         className={`flex items-center gap-2 px-6 py-2 rounded-full font-bold transition-all ${selectedTerm === term
                                 ? 'bg-metarh-primary text-white shadow-lg scale-105'
                                 : 'bg-white text-gray-500 hover:bg-slate-50 border border-gray-200'
                             }`}
                     >
-                        {term === 'Todos' && <Clock size={16} />}
-                        {term === 'Curto Prazo' && <AlertCircle size={16} />}
-                        {term === 'Médio Prazo' && <TrendingUp size={16} />}
-                        {term === 'Longo Prazo' && <Target size={16} />}
+                        {term === allLabel && <Clock size={16} />}
+                        {(term.includes('Curto') || term.includes('Short') || term.includes('Corto')) && <AlertCircle size={16} />}
+                        {(term.includes('Médio') || term.includes('Medium') || term.includes('Mediano')) && <TrendingUp size={16} />}
+                        {(term.includes('Longo') || term.includes('Long') || term.includes('Largo')) && <Target size={16} />}
                         {term}
                     </button>
                 ))}
@@ -71,7 +72,7 @@ const RecommendationsSection: React.FC<Props> = ({ language }) => {
 
             {/* Dimensions Loop */}
             {dimensions.map((dim, idx) => {
-                const filteredRecs = dim.recommendations.filter(rec => selectedTerm === 'Todos' || rec.term === selectedTerm);
+                const filteredRecs = dim.recommendations.filter(rec => selectedTerm === allLabel || rec.term === selectedTerm);
 
                 if (filteredRecs.length === 0) return null;
 
@@ -141,11 +142,12 @@ const RecommendationsSection: React.FC<Props> = ({ language }) => {
                             if (paragraph.startsWith('●')) {
                                 const cleanText = paragraph.replace('●', '').trim();
                                 const [boldPart, rest] = cleanText.split(':');
+                                const lowerBold = boldPart.toLowerCase();
 
                                 let Icon = CheckCircle2;
-                                if (cleanText.includes('Vantagem Competitiva')) Icon = Rocket;
-                                if (cleanText.includes('Redução de Custos')) Icon = PiggyBank;
-                                if (cleanText.includes('Melhoria de Performance')) Icon = BarChart3;
+                                if (lowerBold.includes('vantagem') || lowerBold.includes('advantage') || lowerBold.includes('ventaja')) Icon = Rocket;
+                                if (lowerBold.includes('custo') || lowerBold.includes('cost')) Icon = PiggyBank;
+                                if (lowerBold.includes('performance') || lowerBold.includes('desempenho') || lowerBold.includes('productividad')) Icon = BarChart3;
 
                                 return (
                                     <div key={idx} className="flex items-start gap-3 bg-white/10 p-4 rounded-lg">
