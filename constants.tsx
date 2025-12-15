@@ -781,7 +781,8 @@ const translateLabel = (label: string, lang: Language): string => {
 };
 
 // --- RECOMMENDATIONS DATA ---
-export const RECOMMENDATIONS_DATA = {
+// --- RECOMMENDATIONS DATA ---
+const RECOMMENDATIONS_DATA_PT = {
   title: "Relatório de Recomendações Estratégicas Censo DEIP Eastman 2025",
   introduction: [
     "O presente relatório visa apresentar as recomendações estratégicas da METARH, baseadas nos resultados do Censo de Diversidade, Equidade e Inclusão (DEIP) realizado na Eastman entre 02 de outubro e 15 de novembro de 2025.",
@@ -899,6 +900,255 @@ export const RECOMMENDATIONS_DATA = {
     "As oportunidades estratégicas estão em reforçar a comunicação e profissionalizar os processos de seleção e carreira para traduzir o valor da inclusão em ações tangíveis. A jornada DEIP é contínua, e o time Trilhando+ está preparado para apoiar a Eastman na implementação dessas recomendações."
   ]
 };
+
+const RECOMMENDATIONS_DATA_EN = {
+  title: "Eastman DEIP Census 2025 Strategic Recommendations Report",
+  introduction: [
+    "This report aims to present METARH's strategic recommendations, based on the results of the Diversity, Equity, and Inclusion (DEI) Census conducted at Eastman between October 2nd and November 15th, 2025.",
+    "The Census, which had the participation of 126 collaborators, revealed mostly positive perceptions about the culture of respect and sense of belonging, but also pointed out critical areas for improvement in terms of representativeness and visibility of DEI actions.",
+    "For DEI to stop being seen as a cost and start being recognized as a strategic investment, the following recommendations will be aligned with the financial and performance results that a truly inclusive and diverse culture brings."
+  ],
+  dimensions: [
+    {
+      id: 'diversidade',
+      title: '2.1. Dimension: Diversity (Demographic Mapping)',
+      description: 'The Diversity dimension focuses on knowing the demographic profile of collaborators, and the Census identified low representativeness in the 50+, People with Disabilities (PWD), and Gender/Race Diversity groups.',
+      recommendations: [
+        {
+          term: 'Short Term',
+          action: 'Creation and communication of affirmative vacancies',
+          detail: 'Initial focus on young apprentices/interns and PWD candidates to supply low representation.',
+          justification: 'Increasing diversity enriches the work environment with different perspectives, leading to more creative and effective solutions. Financially, attracting and retaining diverse talent is proven to improve innovation and the company\'s bottom line.'
+        },
+        {
+          term: 'Medium Term',
+          action: 'Review of recruitment and selection (R&S) policy.',
+          detail: 'Actively implement diversity indicators (KPIs) for tactical and strategic positions, and in areas with low representativeness, such as the Mauá Factory (low female presence, 11%) and the SP office (low presence of Black, Asian, and Indigenous people).',
+          justification: 'Mitigation of collaborator skepticism. The internal audience has a moderate perception of Eastman\'s recognition as a diverse company. Increasing diversity helps strengthen the employer brand and retain talent.'
+        },
+        {
+          term: 'Long Term',
+          action: 'Reverse mentorship and Sponsorship program.',
+          detail: 'Focus on attracting and retaining 50+ professionals and minoritized races/ethnicities, connecting them to leadership to ensure growth equity.',
+          justification: 'More experienced professionals (50+) demonstrate high engagement and a strong sense of responsibility. Their retention and hiring reduce high turnover costs and the loss of valuable expertise.'
+        }
+      ]
+    },
+    {
+      id: 'inclusao',
+      title: '2.2. Dimension: Inclusion (Environment Perception)',
+      description: 'This dimension maps the perception of belonging and appreciation. The Census points to a strong sense of respect (94%), but a concern about equal opportunities (20% disagreement) and insecurity in being authentic (33% are afraid or do not feel comfortable).',
+      recommendations: [
+        {
+          term: 'Short Term',
+          action: 'Transparent internal career communication plan.',
+          detail: 'Focus on clearly disclosing development and professional advancement criteria.',
+          justification: 'Increased engagement. Collaborators who perceive equal opportunities and feel respected are more likely to seek knowledge to evolve in their careers. This drives performance and creativity.'
+        },
+        {
+          term: 'Medium Term',
+          action: 'Inclusive leadership and unconscious bias management training.',
+          detail: 'Direct leadership is well-rated (94%), but needs tools to resolve the fear of 1/3 of the team in being authentic.',
+          justification: 'Risk reduction. The sense of safety and belonging positively affects the physical and mental health of collaborators. Reducing stress related to authenticity decreases absenteeism and burnout turnover costs.'
+        },
+        {
+          term: 'Long Term',
+          action: 'Deepening active listening with minoritized groups.',
+          detail: 'Implement affinity groups and specific listening channels for PWDs and LGBTQIAPN+.',
+          justification: 'Retention of minoritized talent. Deepening listening ensures that inclusion is perceived consistently by those who need it most. Reduces voluntary turnover, saving on replacement costs.'
+        }
+      ]
+    },
+    {
+      id: 'culturais',
+      title: '2.3. Dimension: Organizational Cultural Aspects',
+      description: 'This dimension evaluates the policies, values, and practices that define the culture. It was noted that policies exist but are not fully disseminated, and practices are not clearly recognized in the day-to-day by collaborators.',
+      recommendations: [
+        {
+          term: 'Short Term',
+          action: 'Campaign to disseminate DEIP policy and reporting channels.',
+          detail: 'Ensure all collaborators understand the objectives and guidelines and know that discriminatory practices are combated.',
+          justification: 'Strengthening the culture of respect. Investing in internal communication reduces uncertainties (high rate of neutrals) and reinforces institutional commitment, solidifying the culture of safety at work.'
+        },
+        {
+          term: 'Medium Term',
+          action: 'Creation of a Diversity and Inclusion (DEI) committee.',
+          detail: 'Structure governance to define annual goals and indicators (KPIs) and ensure visibility of actions.',
+          justification: 'Consolidation of Company Value. By making the \'Inclusion and Diversity\' value more tangible and visible in daily life, the company reinforces collaborator loyalty and leadership confidence in the strategy.'
+        },
+        {
+          term: 'Long Term',
+          action: 'Continuous and mandatory training.',
+          detail: 'Establish training on Non-Violent Communication, Cultural Sensitivity, Psychological Safety, Harassment, and themes pertinent to DEIP.',
+          justification: 'Communication Improvement. Strengthening internal and external communication practices (which still have high neutrality and low total agreement) positions the company as a reference and improves the relationship with the external public.'
+        }
+      ]
+    },
+    {
+      id: 'representatividade',
+      title: '2.4. Dimension: Representativeness (Presence in Leadership and Processes)',
+      description: 'Representativeness refers to the perception of the presence of diverse groups in all spheres, especially in leadership. The Census indicates that the perception of diversity in leadership is mostly moderate/low, and collaborators have a neutral or negative view on the prioritization of minoritized groups in internal selection processes (PWDs, LGBTQIAPN+, and Races).',
+      recommendations: [
+        {
+          term: 'Short Term',
+          action: 'Transparency and disclosure of selection criteria.',
+          detail: 'Expand visibility of affirmative actions and communicate results clearly.',
+          justification: 'Reduction of neutrality. The high index of neutrality indicates that actions are not perceived. Greater visibility increases trust and consolidates positive perception.'
+        },
+        {
+          term: 'Medium Term',
+          action: 'Diverse leadership development program.',
+          detail: 'Create inclusive career paths for underrepresented groups, actively preparing them for management positions.',
+          justification: 'Improvement in decision making. Representativeness ensures that different voices and experiences are included in decisions. Companies with greater diversity in leadership demonstrate better financial performance and greater resilience to crises.'
+        },
+        {
+          term: 'Long Term',
+          action: 'Implementation of DEIP criteria for commercial partnerships.',
+          detail: 'Make the value of diversity inclusion an explicit and eliminatory factor in the selection and maintenance of suppliers and clients.',
+          justification: 'Strategic alignment with the brand: The discrepancy regarding the prioritization of this value in partnerships (73% consider only sometimes or not always) weakens the external image. Aligning partners consolidates the employer brand as a reference on the topic.'
+        }
+      ]
+    }
+  ],
+  conclusion: [
+    "The Eastman DEIP Census results confirm that the path to a truly inclusive culture is in progress but requires greater intentionality and visibility of actions. Positive perceptions of respect and belonging are the solid foundation of the culture. However, the high rate of neutral responses and low representativeness of minoritized groups signal a disconnect between the discourse and perceived practice.",
+    "DEI is not an expense, it is a growth strategy. The proposed actions are not just Human Resources initiatives, but drivers of financial results, such as:",
+    "● Competitive Advantage (Innovation): mapping diversity enriches the work environment, leading to more creative and effective solutions.",
+    "● Turnover Cost Reduction: Investing in inclusion and belonging is the main retention strategy. The cost to replace a professional can vary between 6 to 9 months of that collaborator's salary, impacting the company's bottom line.",
+    "● Performance and Productivity Improvement: companies with effective recognition and reward programs report up to a 31% improvement in overall productivity.",
+    "Strategic opportunities lie in strengthening communication and professionalizing selection and career processes to translate the value of inclusion into tangible actions. The DEI journey is continuous, and the Trilhando+ team is prepared to support Eastman in implementing these recommendations."
+  ]
+};
+
+const RECOMMENDATIONS_DATA_ES = {
+  title: "Informe de Recomendaciones Estratégicas Censo DEIP Eastman 2025",
+  introduction: [
+    "Este informe tiene como objetivo presentar las recomendaciones estratégicas de METARH, basadas en los resultados del Censo de Diversidad, Equidad e Inclusión (DEIP) realizado en Eastman entre el 2 de octubre y el 15 de noviembre de 2025.",
+    "El Censo, que contó con la participación de 126 colaboradores, reveló percepciones mayoritariamente positivas sobre la cultura de respeto y el sentido de pertenencia, pero también señaló áreas críticas de mejora en términos de representatividad y visibilidad de las acciones de DEIP.",
+    "Para que el tema DEIP deje de ser visto como un costo y pase a ser reconocido como una inversión estratégica, las siguientes recomendaciones estarán alineadas con los resultados financieros y de desempeño que una cultura verdaderamente inclusiva y diversa conlleva."
+  ],
+  dimensions: [
+    {
+      id: 'diversidade',
+      title: '2.1. Dimensión: Diversidad (Mapeo Demográfico)',
+      description: 'La dimensión Diversidad se concentra en conocer el perfil demográfico de los colaboradores y el Censo identificó baja representatividad en los grupos 50+, Personas con Discapacidad (PCDs), y Diversidad de Género/Raza.',
+      recommendations: [
+        {
+          term: 'Corto Plazo',
+          action: 'Creación y comunicación de vacantes afirmativas',
+          detail: 'Enfoque inicial en jóvenes aprendices/becarios y personas candidatas PCDs para suplir la baja representación.',
+          justification: 'El aumento de la diversidad enriquece el ambiente de trabajo con diferentes perspectivas, llevando a soluciones más creativas y eficaces. En términos financieros, la atracción y retención de talentos diversos comprobadamente mejoran la innovación y el resultado final de la empresa.'
+        },
+        {
+          term: 'Mediano Plazo',
+          action: 'Revisión de la política de reclutamiento y selección (R&S).',
+          detail: 'Implementar activamente indicadores (KPIs) de diversidad para cargos tácticos y estratégicos, y en áreas con baja representatividad, como en la Fábrica de Mauá (baja presencia femenina, 11%) y en la oficina de SP (baja presencia de personas negras, amarillas e indígenas).',
+          justification: 'Mitigación del escepticismo de los colaboradores. El público interno tiene una percepción moderada del reconocimiento de Eastman como empresa diversa. Aumentar la diversidad ayuda a fortalecer la marca empleadora y a retener a los talentos.'
+        },
+        {
+          term: 'Largo Plazo',
+          action: 'Programa de mentoría inversa y Sponsorship.',
+          detail: 'Enfocarse en la atracción y retención de profesionales 50+ y de razas/etnias minorizadas, conectándolos a líderes para garantizar equidad de crecimiento.',
+          justification: 'Profesionales más experimentados (50+) demuestran elevado compromiso y fuerte sentido de responsabilidad. Su retención y contratación reducen el alto costo de rotación y la pérdida de experiencia valiosa.'
+        }
+      ]
+    },
+    {
+      id: 'inclusao',
+      title: '2.2. Dimensión: Inclusión (Percepción del Ambiente)',
+      description: 'Esta dimensión mapea la percepción de pertenencia y valoración. El Censo apunta un fuerte sentido de respeto (94%), pero una preocupación sobre la igualdad de oportunidades (20% de desacuerdo) e inseguridad en ser auténtico (33% tienen miedo o no se sienten cómodos).',
+      recommendations: [
+        {
+          term: 'Corto Plazo',
+          action: 'Plan de comunicación interna de carrera transparente.',
+          detail: 'Enfocarse en divulgar claramente los criterios de desarrollo y ascenso profesional.',
+          justification: 'Aumento del compromiso. Colaboradores que perciben igualdad de oportunidades y que se sienten respetados son más propensos a buscar conocimiento para evolucionar en sus carreras. Esto impulsa el desempeño y la creatividad.'
+        },
+        {
+          term: 'Mediano Plazo',
+          action: 'Entrenamiento de liderazgo inclusivo y gestión de sesgos inconscientes.',
+          detail: 'El liderazgo directo es bien evaluado (94%), pero necesita herramientas para resolver el temor de 1/3 del equipo en ser auténtico.',
+          justification: 'Reducción de riesgos. La sensación de seguridad y pertenencia afecta positivamente la salud física y mental de los colaboradores. Reducir el estrés relacionado con la autenticidad disminuye el ausentismo y el costo de rotación por agotamiento.'
+        },
+        {
+          term: 'Largo Plazo',
+          action: 'Profundización de la escucha activa con grupos minorizados.',
+          detail: 'Implementar grupos de afinidad y canales de escucha específicos para PCDs y LGBTQIAPN+.',
+          justification: 'Retención de talentos minorizados. La profundización de la escucha garantiza que la inclusión sea percibida de forma consistente por quien más lo necesita. Reduce la rotación voluntaria, economizando en costos de sustitución.'
+        }
+      ]
+    },
+    {
+      id: 'culturais',
+      title: '2.3. Dimensión: Aspectos Culturales y Organizacionales',
+      description: 'Esta dimensión evalúa las políticas, valores y prácticas que definen la cultura. Se notó que las políticas existen, pero no son plenamente difundidas, y las prácticas no son reconocidas de forma clara en el día a día por los colaboradores.',
+      recommendations: [
+        {
+          term: 'Corto Plazo',
+          action: 'Campaña de difusión de la política DEIP y canales de denuncia.',
+          detail: 'Garantizar que todos los colaboradores comprendan los objetivos y directrices y sepan que las prácticas discriminatorias son combatidas.',
+          justification: 'Fortalecimiento de la cultura de respeto. Invertir en la comunicación interna reduce las incertidumbres (alto índice de neutrales) y refuerza el compromiso institucional, consolidando la cultura de seguridad en el trabajo.'
+        },
+        {
+          term: 'Mediano Plazo',
+          action: 'Creación de un comité de Diversidad e Inclusión (DEI).',
+          detail: 'Estructurar la gobernanza para definir metas e indicadores anuales (KPIs) y garantizar la visibilidad de las acciones.',
+          justification: 'Consolidación del Valor de la Empresa. Al hacer el valor \'Inclusión y Diversidad\' más tangible y visible en el día a día, la empresa refuerza la fidelidad del colaborador y la confianza del liderazgo en la estrategia.'
+        },
+        {
+          term: 'Largo Plazo',
+          action: 'Entrenamientos continuos y obligatorios.',
+          detail: 'Establecer entrenamientos sobre Comunicación No Violenta, Sensibilidad Cultural, Seguridad Psicológica, Acoso y temas pertinentes a DEIP.',
+          justification: 'Mejora de la Comunicación. El fortalecimiento de las prácticas de comunicación interna y externa (que aún tienen alta neutralidad y baja concordancia total) posiciona a la empresa como referencia y mejora la relación con el público externo.'
+        }
+      ]
+    },
+    {
+      id: 'representatividade',
+      title: '2.4. Dimensión: Representatividad (Presencia en Liderazgo y Procesos)',
+      description: 'La representatividad se refiere a la percepción de la presencia de grupos diversos en todas las esferas, especialmente en el liderazgo. El Censo indica que la percepción de diversidad en el liderazgo es mayoritariamente moderada/baja, y los colaboradores tienen una visión neutral o negativa sobre la priorización de grupos minorizados en los procesos selectivos internos (PCDs, LGBTQIAPN+ y Razas).',
+      recommendations: [
+        {
+          term: 'Corto Plazo',
+          action: 'Transparencia y divulgación de los criterios de selección.',
+          detail: 'Ampliar la visibilidad de acciones afirmativas y comunicar los resultados de forma clara.',
+          justification: 'Reducción de la neutralidad. El alto índice de neutralidad indica que las acciones no son percibidas. Mayor visibilidad aumenta la confianza y consolida la percepción positiva.'
+        },
+        {
+          term: 'Mediano Plazo',
+          action: 'Programa de desarrollo de liderazgo diverso.',
+          detail: 'Crear caminos de carrera inclusivos para grupos subrepresentados, preparándolos activamente para cargos de gestión.',
+          justification: 'Mejora en la toma de decisiones. La representatividad asegura que diferentes voces y experiencias estén incluidas en las decisiones. Empresas con mayor diversidad en el liderazgo demuestran mejor desempeño financiero y mayor resiliencia a crisis.'
+        },
+        {
+          term: 'Largo Plazo',
+          action: 'Implementación de criterios de DEIP para asociaciones comerciales.',
+          detail: 'Hacer del valor de inclusión de la diversidad un factor explícito y eliminatorio en la selección y mantenimiento de proveedores y clientes.',
+          justification: 'Alineación estratégica con la marca: La discrepancia sobre la priorización de este valor en asociaciones (73% consideran solo a veces o no siempre) debilita la imagen externa. Alinear socios consolida la marca empleadora como referencia en el tema.'
+        }
+      ]
+    }
+  ],
+  conclusion: [
+    "Los resultados del Censo DEIP Eastman confirman que el camino para una cultura verdaderamente inclusiva está en progreso, pero exige mayor intencionalidad y visibilidad de las acciones. Las percepciones positivas sobre respeto y pertenencia son la base sólida de la cultura. Sin embargo, la alta tasa de respuestas neutrales y la baja representatividad de grupos minorizados señalan una desconexión entre el discurso y la práctica percibida.",
+    "DEIP no es un gasto, es una estrategia de crecimiento. Las acciones propuestas no son solo iniciativas del área de Recursos Humanos, sino motores de resultados financieros, como:",
+    "● Ventaja Competitiva (Innovación): mapear la diversidad enriquece el ambiente de trabajo, lo que lleva a soluciones más creativas y eficaces.",
+    "● Reducción de Costos de Rotación: Invertir en inclusión y pertenencia es la principal estrategia de retención. El costo para sustituir a un profesional puede variar entre 6 a 9 meses del salario de ese colaborador, impactando el resultado final de la empresa.",
+    "● Mejora de Desempeño y Productividad: empresas con programas eficaces de reconocimiento y recompensas reportan una mejora de hasta 31% en la productividad general.",
+    "Las oportunidades estratégicas están en reforzar la comunicación y profesionalizar los procesos de selección y carrera para traducir el valor de la inclusión en acciones tangibles. La jornada DEIP es continua, y el equipo Trilhando+ está preparado para apoyar a Eastman en la implementación de estas recomendaciones."
+  ]
+};
+
+export const getRecommendationsData = (lang: Language) => {
+  switch (lang) {
+    case 'en': return RECOMMENDATIONS_EN;
+    case 'es': return RECOMMENDATIONS_ES;
+    default: return RECOMMENDATIONS_PT; // pt
+  }
+};
+const RECOMMENDATIONS_EN = RECOMMENDATIONS_DATA_EN; // Alias for consistency if needed, but switching naming above is fine.
+const RECOMMENDATIONS_ES = RECOMMENDATIONS_DATA_ES;
+const RECOMMENDATIONS_PT = RECOMMENDATIONS_DATA_PT;
 
 // --- SURVEY DATA ---
 
