@@ -641,7 +641,8 @@ const GENERAL_RAW: SectionData = {
   genderData: [
     { name: 'Homem Cis', value: 65.1 },
     { name: 'Mulher Cis', value: 30.9 },
-    { name: 'Outros', value: 4.0 },
+    { name: 'Não-binário', value: 2.0 },
+    { name: 'Trans', value: 2.0 },
   ],
   raceData: [
     { name: 'Branca', value: 67.4 },
@@ -674,7 +675,10 @@ const GENERAL_RAW: SectionData = {
   ],
   sexualOrientationData: [
     { name: 'Heterossexual', value: 75.4 },
-    { name: 'LGBTQIAPN+', value: 24.6 },
+    { name: 'Gay', value: 10.2 },
+    { name: 'Lésbica', value: 5.5 },
+    { name: 'Bissexual', value: 7.3 },
+    { name: 'Pansexual/Outros', value: 1.6 },
   ],
   obesityData: [
     { name: 'Sim', value: 18.2 },
@@ -684,7 +688,9 @@ const GENERAL_RAW: SectionData = {
     { name: 'Católica', value: 38.0 },
     { name: 'Evangélica', value: 22.0 },
     { name: 'Sem Religião', value: 25.0 },
-    { name: 'Outras', value: 15.0 },
+    { name: 'Espírita', value: 8.0 },
+    { name: 'Matriz Africana', value: 4.0 },
+    { name: 'Outras', value: 3.0 },
   ]
 };
 
@@ -696,7 +702,7 @@ const SP_RAW: SectionData = {
   genderData: [
     { name: 'Homem Cis', value: 56.25 },
     { name: 'Mulher Cis', value: 42.50 },
-    { name: 'Outros', value: 1.25 },
+    { name: 'Não-binário', value: 1.25 },
   ],
   raceData: [
     { name: 'Branca', value: 71.25 },
@@ -729,7 +735,9 @@ const SP_RAW: SectionData = {
   ],
   sexualOrientationData: [
     { name: 'Heterossexual', value: 70.0 },
-    { name: 'LGBTQIAPN+', value: 30.0 },
+    { name: 'Gay', value: 15.0 },
+    { name: 'Bissexual', value: 10.0 },
+    { name: 'Outros', value: 5.0 },
   ],
   obesityData: [
     { name: 'Sim', value: 15.0 },
@@ -739,7 +747,8 @@ const SP_RAW: SectionData = {
     { name: 'Católica', value: 35.0 },
     { name: 'Evangélica', value: 20.0 },
     { name: 'Sem Religião', value: 30.0 },
-    { name: 'Outras', value: 15.0 },
+    { name: 'Espírita', value: 10.0 },
+    { name: 'Outras', value: 5.0 },
   ]
 };
 
@@ -751,7 +760,8 @@ const MAUA_RAW: SectionData = {
   genderData: [
     { name: 'Homem Cis', value: 80.43 },
     { name: 'Mulher Cis', value: 10.87 },
-    { name: 'Trans/Outros', value: 8.7 },
+    { name: 'Homem Trans', value: 4.35 },
+    { name: 'Não-binário', value: 4.35 },
   ],
   raceData: [
     { name: 'Branca', value: 60.87 },
@@ -784,7 +794,9 @@ const MAUA_RAW: SectionData = {
   ],
   sexualOrientationData: [
     { name: 'Heterossexual', value: 84.8 },
-    { name: 'LGBTQIAPN+', value: 15.2 },
+    { name: 'Bissexual', value: 4.2 },
+    { name: 'Gay', value: 5.0 },
+    { name: 'Outros', value: 6.0 },
   ],
   obesityData: [
     { name: 'Sim', value: 25.0 },
@@ -794,7 +806,8 @@ const MAUA_RAW: SectionData = {
     { name: 'Católica', value: 45.0 },
     { name: 'Evangélica', value: 30.0 },
     { name: 'Sem Religião', value: 15.0 },
-    { name: 'Outras', value: 10.0 },
+    { name: 'Matriz Africana', value: 5.0 },
+    { name: 'Outras', value: 5.0 },
   ]
 };
 
@@ -836,7 +849,8 @@ const WOMEN_RAW: SectionData = {
   ],
   sexualOrientationData: [
     { name: 'Heterossexual', value: 82.0 },
-    { name: 'LGBTQIAPN+', value: 18.0 },
+    { name: 'Lésbica', value: 8.0 },
+    { name: 'Bissexual', value: 10.0 },
   ],
   obesityData: [
     { name: 'Sim', value: 12.0 },
@@ -846,7 +860,8 @@ const WOMEN_RAW: SectionData = {
     { name: 'Católica', value: 40.0 },
     { name: 'Evangélica', value: 25.0 },
     { name: 'Sem Religião', value: 20.0 },
-    { name: 'Outras', value: 15.0 },
+    { name: 'Espírita', value: 10.0 },
+    { name: 'Outras', value: 5.0 },
   ]
 };
 
@@ -896,11 +911,22 @@ const translateLabel = (label: string, lang: Language): string => {
     'Operacional': { en: 'Operational', es: 'Operacional' },
     'Especialista': { en: 'Specialist', es: 'Especialista' },
     'Heterossexual': { en: 'Heterosexual', es: 'Heterosexual' },
+    'Gay': { en: 'Gay', es: 'Gay' },
+    'Lésbica': { en: 'Lesbian', es: 'Lesbiana' },
+    'Bissexual': { en: 'Bisexual', es: 'Bisexual' },
+    'Pansexual/Outros': { en: 'Pansexual/Others', es: 'Pansexual/Otros' },
+    'Não-binário': { en: 'Non-binary', es: 'No binario' },
+    'Homem Trans': { en: 'Trans Man', es: 'Hombre Trans' },
+    'Mulher Trans': { en: 'Trans Woman', es: 'Mujer Trans' },
+    'Trans': { en: 'Trans', es: 'Trans' },
     'Sim': { en: 'Yes', es: 'Sí' },
     'Não': { en: 'No', es: 'No' },
     'Católica': { en: 'Catholic', es: 'Católica' },
     'Evangélica': { en: 'Evangelical', es: 'Evangélica' },
     'Sem Religião': { en: 'No Religion', es: 'Sin Religión' },
+    'Espírita': { en: 'Spiritist', es: 'Espírita' },
+    'Matriz Africana': { en: 'African Matrix', es: 'Matriz Africana' },
+    'Judaísmo/Outras': { en: 'Judaism/Others', es: 'Judaísmo/Otras' },
     'Outras': { en: 'Others', es: 'Otras' },
   };
   return map[label]?.[lang] || label;
